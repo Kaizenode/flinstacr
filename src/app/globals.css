@@ -18,6 +18,10 @@
 
 html { scroll-behavior: smooth; }
 
+h1, h2 {
+  font-family: 'Satoshi', sans-serif;
+}
+
 body {
   background: var(--bg) !important;
   color: var(--text) !important;
@@ -211,8 +215,15 @@ body::before {
 .scroll-hide::-webkit-scrollbar { display: none; }
 .scroll-hide { scrollbar-width: none; -ms-overflow-style: none; }
 
+/* ── Work Grid ── */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
 /* ── Work Card ── */
-.work-card { position: relative; overflow: hidden; border-radius: 16px; flex-shrink: 0; cursor: pointer; }
+.work-card { position: relative; overflow: hidden; border-radius: 16px; cursor: pointer; }
 .work-card-inner { transition: transform 0.4s ease; height: 100%; }
 .work-card:hover .work-card-inner { transform: scale(1.03); }
 
@@ -222,4 +233,177 @@ body::before {
   .method-card-wrapper::before { animation: none; }
   .work-card:hover .work-card-inner { transform: none; }
   body::before           { display: none; }
+}
+
+/* ── Responsive Layout Classes ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.grid-split {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* ── Tablet (≤ 960px) ── */
+@media (max-width: 960px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .method-card-wrapper {
+    height: auto;
+    min-height: 260px;
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  /* Nav */
+  nav {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    inset: 0;
+    padding-top: 5.5rem;
+    background: rgba(0, 0, 0, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    z-index: 998;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem !important;
+  }
+
+  /* Sections */
+  #services, #method, #about, #testimonials {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  #work {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .work-header-pad {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* Footer */
+  footer {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Grids */
+  .grid-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Method cards */
+  .method-card-wrapper {
+    height: auto;
+    min-height: 220px;
+  }
+}
+
+/* ── Small Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  #services, #method, #about, #testimonials {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .work-header-pad {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .work-grid {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
 }

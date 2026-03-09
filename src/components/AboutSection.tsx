@@ -24,16 +24,7 @@ export default function AboutSection() {
       id="about"
       style={{ background: "var(--bg)", padding: "8rem 3rem" }}
     >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "55fr 45fr",
-          gap: "5rem",
-          alignItems: "start",
-        }}
-      >
+      <div className="grid-split">
         {/* ── Left ── */}
         <div>
           <p

@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const cases = [
@@ -32,28 +31,18 @@ const cases = [
 
 export default function WorkSection() {
   const ref = useScrollReveal<HTMLElement>();
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  const scrollRight = () => {
-    trackRef.current?.scrollBy({ left: 320, behavior: "smooth" });
-  };
 
   return (
     <section ref={ref} id="work" style={{ background: "var(--bg)", padding: "8rem 0" }}>
       {/* Header */}
       <div
+        className="work-header-pad"
         style={{
           marginBottom: "2.5rem",
           padding: "0 max(3rem, calc((100vw - 1200px) / 2))",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1.5rem",
-          }}
-        >
+        <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
           <span
             data-reveal
             style={{
@@ -73,37 +62,14 @@ export default function WorkSection() {
               borderTop: "1px solid rgba(255,255,255,0.07)",
             }}
           />
-
-          {/* Nav arrow */}
-          <button
-            onClick={scrollRight}
-            className="btn-metallic"
-            style={{
-              width: "44px",
-              height: "44px",
-              padding: 0,
-              borderRadius: "50%",
-              flexShrink: 0,
-            }}
-            aria-label="Scroll right"
-          >
-            →
-          </button>
         </div>
       </div>
 
-      {/* Scrollable track — padding so shadows show, no overflow:hidden on outer */}
+      {/* Cards grid */}
       <div
-        ref={trackRef}
-        className="scroll-hide"
+        className="work-grid"
         style={{
-          display: "flex",
-          gap: "1.25rem",
-          overflowX: "auto",
-          scrollSnapType: "x mandatory",
-          paddingLeft: "max(3rem, calc((100vw - 1200px) / 2))",
-          paddingRight: "max(3rem, calc((100vw - 1200px) / 2))",
-          paddingBottom: "0.5rem",
+          padding: "0 max(3rem, calc((100vw - 1200px) / 2))",
         }}
       >
         {cases.map((c, i) => (
@@ -113,13 +79,9 @@ export default function WorkSection() {
             data-delay={`${i + 1}`}
             className="work-card"
             style={{
-              width: "280px",
-              minHeight: "373px",
-              aspectRatio: "3/4",
+              minHeight: "320px",
               background: c.bg,
               border: "1px solid rgba(255,255,255,0.07)",
-              scrollSnapAlign: "start",
-              flexShrink: 0,
             }}
           >
             <div
@@ -128,6 +90,8 @@ export default function WorkSection() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
+                alignItems: "center",
+                textAlign: "center",
                 padding: "1.5rem",
                 height: "100%",
               }}
@@ -146,7 +110,7 @@ export default function WorkSection() {
               </span>
 
               {/* Result */}
-              <div>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <p
                   style={{
                     fontSize: "0.78rem",

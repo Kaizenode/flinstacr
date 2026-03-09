@@ -101,13 +101,7 @@ export default function MethodSection() {
         </div>
 
         {/* Phase cards */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1.25rem",
-          }}
-        >
+        <div className="grid-4">
           {phases.map((phase, i) => (
             <div key={phase.num} className="method-card-wrapper" data-reveal data-delay={`${i + 1}`}>
             <div className="method-card">
