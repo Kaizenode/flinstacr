@@ -154,19 +154,57 @@ body::before {
 }
 
 /* ── Method Cards ── */
+@property --method-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes methodAura {
+  to { --method-angle: 360deg; }
+}
+
+.method-card-wrapper {
+  position: relative;
+  border-radius: 21px;
+  padding: 1px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.method-card-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 0;
+  background: conic-gradient(
+    from var(--method-angle),
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.06) 60%,
+    rgba(255,255,255,0.18) 76%,
+    rgba(255,255,255,0.70) 87%,
+    rgba(255,255,255,0.95) 90%,
+    rgba(255,255,255,0.70) 93%,
+    rgba(255,255,255,0.18) 97%,
+    rgba(255,255,255,0.06) 100%
+  );
+  animation: methodAura 5s linear infinite;
+}
+
+.method-card-wrapper:nth-child(2)::before { animation-delay: -1.25s; }
+.method-card-wrapper:nth-child(3)::before { animation-delay: -2.5s; }
+.method-card-wrapper:nth-child(4)::before { animation-delay: -3.75s; }
+
 .method-card {
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: none;
   border-radius: 20px;
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.method-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  height: 100%;
 }
 
 /* ── Scrollbar Hide ── */
@@ -181,8 +219,7 @@ body::before {
 /* ── Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
   [data-reveal]          { opacity: 1; transform: none; transition: none; }
-  .method-card           { transition: none; }
-  .method-card:hover     { transform: none; }
+  .method-card-wrapper::before { animation: none; }
   .work-card:hover .work-card-inner { transform: none; }
   body::before           { display: none; }
 }

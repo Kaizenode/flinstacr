@@ -43,10 +43,8 @@ export default function WorkSection() {
       {/* Header */}
       <div
         style={{
-          padding: "0 3rem",
           marginBottom: "2.5rem",
-          maxWidth: "1200px",
-          margin: "0 auto 2.5rem",
+          padding: "0 max(3rem, calc((100vw - 1200px) / 2))",
         }}
       >
         <div
@@ -103,8 +101,8 @@ export default function WorkSection() {
           gap: "1.25rem",
           overflowX: "auto",
           scrollSnapType: "x mandatory",
-          paddingLeft: "3rem",
-          paddingRight: "3rem",
+          paddingLeft: "max(3rem, calc((100vw - 1200px) / 2))",
+          paddingRight: "max(3rem, calc((100vw - 1200px) / 2))",
           paddingBottom: "0.5rem",
         }}
       >

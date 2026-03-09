@@ -109,12 +109,8 @@ export default function MethodSection() {
           }}
         >
           {phases.map((phase, i) => (
-            <div
-              key={phase.num}
-              data-reveal
-              data-delay={`${i + 1}`}
-              className="method-card"
-            >
+            <div key={phase.num} className="method-card-wrapper" data-reveal data-delay={`${i + 1}`}>
+            <div className="method-card">
               {/* Ghost number */}
               <span
                 aria-hidden="true"
@@ -175,6 +171,7 @@ export default function MethodSection() {
               >
                 {phase.desc}
               </p>
+            </div>
             </div>
           ))}
         </div>
