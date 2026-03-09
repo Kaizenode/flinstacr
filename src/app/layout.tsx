@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Flinsta — Posicionamiento Estratégico para Profesionales Premium",
+  title: "Flinsta | Posicionamiento Estratégico",
   description:
     "Deja de vender horas. Empieza a vender autoridad. Ayudamos a profesionales 1:1 a construir ofertas premium y generar demanda orgánica de alto valor.",
   openGraph: {
-    title: "Flinsta — Posicionamiento Estratégico para Profesionales Premium",
+    title: "Flinsta — Posicionamiento Estratégico",
     description:
       "Deja de vender horas. Empieza a vender autoridad. Ayudamos a profesionales 1:1 a construir ofertas premium y generar demanda orgánica de alto valor.",
     type: "website",
