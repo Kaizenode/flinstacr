@@ -1,12 +1,25 @@
+import Nav from "@/components/Nav";
+import HeroSection from "@/components/HeroSection";
+import ProblemSection from "@/components/ProblemSection";
+import MethodSection from "@/components/MethodSection";
+import AboutSection from "@/components/AboutSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import WorkSection from "@/components/WorkSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main className="min-h-screen px-8 py-16 md:px-16">
-      <h1 className="text-4xl font-bold tracking-tight">
-        Flinstacr
-      </h1>
-      <p className="mt-4 text-sm text-muted-foreground">
-        Flinstacr landing page
-      </p>
-    </main>
+    <>
+      <Nav />
+      <HeroSection />
+      <ProblemSection />
+      <MethodSection />
+      <AboutSection />
+      <TestimonialsSection />
+      <WorkSection />
+      <CTASection />
+      <Footer />
+    </>
   );
 }
