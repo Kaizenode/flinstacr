@@ -60,7 +60,7 @@ export default function HeroSection() {
               animation: "pulse 2s ease-in-out infinite",
             }}
           />
-          Open to new projects
+          Abierto a nuevos proyectos
         </div>
 
         {/* Headline */}
@@ -77,9 +77,9 @@ export default function HeroSection() {
             color: "#fff",
           }}
         >
-          Stop selling hours.
+          Deja de vender horas.
           <br />
-          Start selling authority.
+          Empieza a vender autoridad.
         </h1>
 
         {/* Subheadline */}
@@ -94,8 +94,8 @@ export default function HeroSection() {
             margin: "0 auto 2.75rem",
           }}
         >
-          We help 1:1 professionals exit the interchangeable model and become
-          positioned authorities with structured premium offers.
+          Ayudamos a profesionales 1:1 a salir del modelo intercambiable y convertirse
+          en autoridades posicionadas con ofertas premium estructuradas.
         </p>
 
         {/* CTAs */}
@@ -111,7 +111,7 @@ export default function HeroSection() {
           }}
         >
           <button className="btn-metallic" style={{ padding: "14px 32px" }}>
-            Start the Process
+            Iniciar el Proceso
           </button>
           <a
             href="#method"
@@ -122,7 +122,7 @@ export default function HeroSection() {
               color: "rgba(255,255,255,0.72)",
             }}
           >
-            See the Method →
+            Ver el Método →
           </a>
         </div>
 
@@ -139,7 +139,7 @@ export default function HeroSection() {
             fontSize: "0.8rem",
           }}
         >
-          Scroll down —
+          Desplázate —
           <span
             style={{
               display: "inline-block",

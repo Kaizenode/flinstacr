@@ -1,6 +1,6 @@
 "use client";
 
-const footerLinks = ["Privacy Policy", "Terms"];
+const footerLinks = ["Política de Privacidad", "Términos"];
 
 export default function Footer() {
   return (
@@ -22,7 +22,7 @@ export default function Footer() {
           color: "rgba(255,255,255,0.35)",
         }}
       >
-        © 2025 Flinsta. All rights reserved.
+        © 2025 Flinsta. Todos los derechos reservados.
       </span>
 
       <span

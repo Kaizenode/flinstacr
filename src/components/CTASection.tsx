@@ -67,7 +67,7 @@ export default function CTASection() {
               animation: "pulse 2s ease-in-out infinite",
             }}
           />
-          Open to New Projects
+          Abierto a Nuevos Proyectos
         </div>
 
         {/* Heading */}
@@ -83,7 +83,7 @@ export default function CTASection() {
             marginBottom: "1.75rem",
           }}
         >
-          Ready to stop being interchangeable?
+          ¿Listo para dejar de ser intercambiable?
         </h2>
 
         {/* Subtext */}
@@ -98,14 +98,14 @@ export default function CTASection() {
             margin: "0 auto 3rem",
           }}
         >
-          Let&rsquo;s build your premium offer, sharpen your positioning, and
-          install a system that generates demand. Book a free 30-minute
-          diagnostic call.
+          Construyamos tu oferta premium, afilemos tu posicionamiento e
+          instalemos un sistema que genere demanda. Reserva una llamada
+          diagnóstico gratuita de 30 minutos.
         </p>
 
         {/* CTA */}
         <div data-reveal data-delay="3" style={{ marginBottom: "3rem" }}>
-          <button className="btn-metallic lg">Book a Free Call</button>
+          <button className="btn-metallic lg">Reservar una Llamada Gratuita</button>
         </div>
 
         {/* Social links */}

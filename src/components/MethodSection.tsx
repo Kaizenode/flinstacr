@@ -5,23 +5,23 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const phases = [
   {
     num: "01",
-    title: "Premium Offer Redesign",
-    desc: "We architect a premium offer with a clear transformation, solid structure, and a price that's defensible — not arbitrary.",
+    title: "Rediseño de Oferta Premium",
+    desc: "Arquitectamos una oferta premium con una transformación clara, estructura sólida y un precio que se defiende — no arbitrario.",
   },
   {
     num: "02",
-    title: "Strategic Positioning",
-    desc: "We define your niche by situation, sharpen your professional identity, and eliminate interchangeability.",
+    title: "Posicionamiento Estratégico",
+    desc: "Definimos tu nicho por situación, afilamos tu identidad profesional y eliminamos la intercambiabilidad.",
   },
   {
     num: "03",
-    title: "Content System with Commercial Intent",
-    desc: "We build a content architecture designed for conversion — not engagement. Every piece moves someone closer to buying.",
+    title: "Sistema de Contenido con Intención Comercial",
+    desc: "Construimos una arquitectura de contenido diseñada para la conversión — no el engagement. Cada pieza acerca a alguien más a comprar.",
   },
   {
     num: "04",
-    title: "DM Activation System",
-    desc: "We install a conversation-to-close system that turns inbound DMs into enrolled high-ticket clients.",
+    title: "Sistema de Activación por DM",
+    desc: "Instalamos un sistema de conversación-a-cierre que convierte DMs entrantes en clientes de alto valor.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function MethodSection() {
               marginBottom: "1rem",
             }}
           >
-            The Method
+            El Método
           </p>
 
           <h2
@@ -81,7 +81,7 @@ export default function MethodSection() {
               marginBottom: "1rem",
             }}
           >
-            A structured process. Not a course.
+            Un proceso estructurado. No un curso.
           </h2>
 
           <p
@@ -95,8 +95,8 @@ export default function MethodSection() {
               fontSize: "1rem",
             }}
           >
-            Four interconnected phases that transform how you position, offer,
-            and sell.
+            Cuatro fases interconectadas que transforman cómo te posicionas, ofreces
+            y vendes.
           </p>
         </div>
 

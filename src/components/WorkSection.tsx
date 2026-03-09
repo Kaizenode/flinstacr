@@ -5,26 +5,26 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const cases = [
   {
     handle: "@coach_name",
-    result: "From $80 sessions to $3K program. 6 weeks.",
+    result: "De sesiones de $80 a programa de $3K. 6 semanas.",
     category: "COACHING",
     bg: "#141414",
   },
   {
     handle: "@consultant_name",
-    result: "Content system generating 5 leads/week organically.",
-    category: "CONSULTING",
+    result: "Sistema de contenido generando 5 leads/semana orgánicamente.",
+    category: "CONSULTORÍA",
     bg: "#111111",
   },
   {
     handle: "@therapist_name",
-    result: "Repositioned premium niche. 3x average ticket.",
-    category: "THERAPY",
+    result: "Nicho premium reposicionado. Ticket promedio 3x.",
+    category: "TERAPIA",
     bg: "#131313",
   },
   {
     handle: "@specialist_name",
-    result: "Launched high-ticket program. Sold out in 30 days.",
-    category: "SPECIALIST",
+    result: "Lanzó programa de alto valor. Sold out en 30 días.",
+    category: "ESPECIALISTA",
     bg: "#0f0f0f",
   },
 ];
@@ -53,7 +53,7 @@ export default function WorkSection() {
               whiteSpace: "nowrap",
             }}
           >
-            Case Studies ↓
+            Casos de Estudio ↓
           </span>
           <hr
             style={{
@@ -150,7 +150,7 @@ export default function WorkSection() {
                     cursor: "pointer",
                   }}
                 >
-                  View Case Study ↗
+                  Ver Caso de Estudio ↗
                 </div>
               </div>
             </div>

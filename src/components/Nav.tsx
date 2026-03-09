@@ -2,7 +2,12 @@
 
 import { useState, useEffect } from "react";
 
-const links = ["Services", "Method", "Testimonials", "Contact"];
+const links = [
+  { label: "Servicios", href: "services" },
+  { label: "Método", href: "method" },
+  { label: "Testimonios", href: "testimonials" },
+  { label: "Contacto", href: "contact" },
+];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -58,10 +63,10 @@ export default function Nav() {
 
       {/* Links + CTA */}
       <div className={`nav-links${menuOpen ? " open" : ""}`}>
-        {links.map((item) => (
+        {links.map(({ label, href }) => (
           <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
+            key={href}
+            href={`#${href}`}
             onClick={() => setMenuOpen(false)}
             style={{
               fontSize: "0.875rem",
@@ -74,7 +79,7 @@ export default function Nav() {
               (e.currentTarget.style.color = "rgba(255,255,255,0.65)")
             }
           >
-            {item}
+            {label}
           </a>
         ))}
         <button
@@ -82,7 +87,7 @@ export default function Nav() {
           onClick={() => setMenuOpen(false)}
           style={{ padding: "10px 22px", fontSize: "0.875rem" }}
         >
-          ✦ Book a Call
+          ✦ Reservar una Llamada
         </button>
       </div>
 
@@ -90,7 +95,7 @@ export default function Nav() {
       <button
         className={`nav-toggle${menuOpen ? " open" : ""}`}
         onClick={() => setMenuOpen((prev) => !prev)}
-        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={menuOpen}
       >
         <span />

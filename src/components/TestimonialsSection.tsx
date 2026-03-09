@@ -7,21 +7,21 @@ const testimonials = [
     name: "Laura M.",
     role: "Business Coach",
     quote:
-      "I went from charging $80/session to closing a $3,000 program in 6 weeks. The offer redesign changed everything.",
+      "Pasé de cobrar $80/sesión a cerrar un programa de $3,000 en 6 semanas. El rediseño de la oferta cambió todo.",
     initials: "LM",
   },
   {
     name: "Carlos R.",
-    role: "Marketing Consultant",
+    role: "Consultor de Marketing",
     quote:
-      "I had followers but no system. Now my content actually generates leads that close. Completely different business.",
+      "Tenía seguidores pero no tenía sistema. Ahora mi contenido genera leads que cierran. Un negocio completamente diferente.",
     initials: "CR",
   },
   {
     name: "Valentina S.",
     role: "Executive Coach",
     quote:
-      "The positioning work alone was worth 10x the investment. I stopped competing and started leading.",
+      "El trabajo de posicionamiento solo valió 10 veces la inversión. Dejé de competir y empecé a liderar.",
     initials: "VS",
   },
 ];
@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
               marginBottom: "1rem",
             }}
           >
-            Results
+            Resultados
           </p>
           <h2
             data-reveal
@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
               color: "#fff",
             }}
           >
-            Professionals who made the shift
+            Profesionales que hicieron el cambio
           </h2>
         </div>
 

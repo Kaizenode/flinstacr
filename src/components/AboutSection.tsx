@@ -7,11 +7,11 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const photos = ["/normal.jpeg", "/bw.jpeg"];
 
 const skills = [
-  "Premium Offer Design",
-  "Strategic Positioning",
-  "Content Systems",
-  "High-Ticket Sales",
-  "Personal Brand",
+  "Diseño de Oferta Premium",
+  "Posicionamiento Estratégico",
+  "Sistemas de Contenido",
+  "Ventas de Alto Valor",
+  "Marca Personal",
 ];
 
 export default function AboutSection() {
@@ -37,7 +37,7 @@ export default function AboutSection() {
               marginBottom: "1.25rem",
             }}
           >
-            About
+            Acerca de
           </p>
 
           <h2
@@ -52,7 +52,7 @@ export default function AboutSection() {
               marginBottom: "1.75rem",
             }}
           >
-            Meet the Founder
+            Conoce al Fundador
           </h2>
 
           <p
@@ -65,11 +65,11 @@ export default function AboutSection() {
               marginBottom: "2rem",
             }}
           >
-            I&rsquo;m a strategic positioning consultant. I help professionals
-            with real expertise stop competing on price and start commanding
-            premium. I&rsquo;ve worked with coaches, consultants, and specialists
-            across Latin America to redesign their offers, sharpen their
-            positioning, and build content systems that actually generate clients.
+            Soy consultor de posicionamiento estratégico. Ayudo a profesionales
+            con experiencia real a dejar de competir por precio y empezar a cobrar
+            premium. He trabajado con coaches, consultores y especialistas
+            en toda América Latina para rediseñar sus ofertas, afilar su
+            posicionamiento y construir sistemas de contenido que realmente generan clientes.
           </p>
 
           {/* Skills */}
