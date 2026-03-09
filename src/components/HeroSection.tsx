@@ -3,17 +3,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import BlobBackground from "./BlobBackground";
 
-const logos = [
-  "Forbes",
-  "LinkedIn",
-  "HubSpot",
-  "Kajabi",
-  "Stripe",
-  "Notion",
-  "Webflow",
-  "Calendly",
-];
-
 export default function HeroSection() {
   const ref = useScrollReveal<HTMLElement>();
 
@@ -148,7 +137,6 @@ export default function HeroSection() {
             gap: "0.5rem",
             opacity: 0.4,
             fontSize: "0.8rem",
-            marginBottom: "4rem",
           }}
         >
           Scroll down —
@@ -162,45 +150,6 @@ export default function HeroSection() {
             🖱
           </span>
           —
-        </div>
-
-        {/* Logo ticker */}
-        <div data-reveal data-delay="5" style={{ overflow: "hidden" }}>
-          <p
-            style={{
-              fontSize: "0.7rem",
-              color: "rgba(255,255,255,0.28)",
-              marginBottom: "1.25rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.12em",
-            }}
-          >
-            Trusted by professionals in:
-          </p>
-          <div
-            style={{
-              display: "flex",
-              animation: "marquee 30s linear infinite",
-              whiteSpace: "nowrap",
-              width: "max-content",
-              opacity: 0.35,
-            }}
-          >
-            {[...logos, ...logos].map((logo, i) => (
-              <span
-                key={i}
-                style={{
-                  fontSize: "0.875rem",
-                  fontWeight: 600,
-                  color: "#fff",
-                  padding: "0 3rem",
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                {logo}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

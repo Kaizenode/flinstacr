@@ -1,10 +1,14 @@
 "use client";
 
 import { Fragment } from "react";
+import { FaTiktok, FaInstagram } from "react-icons/fa";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import BlobBackground from "./BlobBackground";
 
-const socials = ["LinkedIn", "Instagram", "Twitter"];
+const socials = [
+  { label: "TikTok", icon: FaTiktok },
+  { label: "Instagram", icon: FaInstagram },
+];
 
 export default function CTASection() {
   const ref = useScrollReveal<HTMLElement>();
@@ -116,8 +120,8 @@ export default function CTASection() {
             fontSize: "0.875rem",
           }}
         >
-          {socials.map((social, i) => (
-            <Fragment key={social}>
+          {socials.map(({ label, icon: Icon }, i) => (
+            <Fragment key={label}>
               {i > 0 && (
                 <span
                   style={{
@@ -130,17 +134,20 @@ export default function CTASection() {
               )}
               <a
                 href="#"
+                aria-label={label}
                 style={{
                   color: "rgba(255,255,255,0.45)",
                   textDecoration: "none",
                   transition: "color 0.2s ease",
+                  display: "inline-flex",
+                  alignItems: "center",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.color = "rgba(255,255,255,0.45)")
                 }
               >
-                {social}
+                <Icon size={20} />
               </a>
             </Fragment>
           ))}
