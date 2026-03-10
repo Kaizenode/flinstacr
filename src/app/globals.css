@@ -299,6 +299,19 @@ body::before {
   }
 }
 
+/* ── Contact Form ── */
+.contact-grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form-card {
+  padding: 2.5rem;
+}
+
+.contact-section {
+  padding: 8rem 2rem;
+}
+
 /* ── Mobile (≤ 768px) ── */
 @media (max-width: 768px) {
   /* Nav */
@@ -381,6 +394,19 @@ body::before {
   .method-card-wrapper {
     height: auto;
     min-height: 220px;
+  }
+
+  /* Contact form */
+  .contact-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem !important;
+  }
+
+  .contact-section {
+    padding: 6rem 1.25rem !important;
   }
 }
 
