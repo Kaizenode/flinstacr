@@ -206,28 +206,28 @@ export default function CTASection() {
         {/* Contact Form */}
         {submitted ? (
           <div
-            data-reveal
-            data-delay="3"
             style={{
-              background: "#111",
-              border: "1px solid rgba(255,255,255,0.1)",
+              background: "#0d0d0d",
+              border: "1px solid rgba(74,222,128,0.2)",
               borderRadius: "20px",
-              padding: "3rem 2rem",
+              padding: "3.5rem 2rem",
               marginBottom: "3rem",
+              animation: "fadeSlideUp 0.5s ease forwards",
             }}
           >
             <div
               style={{
-                width: 48,
-                height: 48,
+                width: 56,
+                height: 56,
                 borderRadius: "50%",
-                background: "rgba(74,222,128,0.12)",
-                border: "1px solid rgba(74,222,128,0.3)",
+                background: "rgba(74,222,128,0.1)",
+                border: "1px solid rgba(74,222,128,0.35)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                margin: "0 auto 1.25rem",
+                margin: "0 auto 1.5rem",
                 fontSize: "1.5rem",
+                color: "#4ade80",
               }}
             >
               ✓
@@ -235,15 +235,24 @@ export default function CTASection() {
             <p
               style={{
                 color: "#fff",
-                fontSize: "1.15rem",
-                fontWeight: 600,
-                marginBottom: "0.5rem",
+                fontSize: "1.25rem",
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
+                marginBottom: "0.625rem",
               }}
             >
-              ¡Solicitud enviada!
+              ¡Mensaje enviado!
             </p>
-            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.95rem" }}>
-              Te contactaremos pronto para agendar tu llamada diagnóstico.
+            <p
+              style={{
+                color: "rgba(255,255,255,0.45)",
+                fontSize: "0.95rem",
+                lineHeight: 1.6,
+                maxWidth: "360px",
+                margin: "0 auto",
+              }}
+            >
+              Recibimos tu información. Nos pondremos en contacto contigo muy pronto.
             </p>
           </div>
         ) : (
@@ -513,8 +522,7 @@ export default function CTASection() {
         )}
 
         {/* OR divider */}
-        {!submitted && (
-          <div
+        <div
             data-reveal
             data-delay="4"
             style={{
@@ -549,16 +557,13 @@ export default function CTASection() {
               }}
             />
           </div>
-        )}
 
         {/* Book a call CTA */}
-        {!submitted && (
-          <div data-reveal data-delay="5" style={{ marginBottom: "3rem" }}>
-            <button className="btn-metallic lg">
-              Reservar una llamada gratuita
-            </button>
-          </div>
-        )}
+        <div data-reveal data-delay="5" style={{ marginBottom: "3rem" }}>
+          <button className="btn-metallic lg">
+            Reservar una llamada gratuita
+          </button>
+        </div>
 
         {/* Social links */}
         <div
