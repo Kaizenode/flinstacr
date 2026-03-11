@@ -110,9 +110,17 @@ export default function HeroSection() {
             marginBottom: "4.5rem",
           }}
         >
-          <button className="btn-metallic" style={{ padding: "14px 32px" }}>
-            Iniciar el Proceso
-          </button>
+          <a
+            href="#contact"
+            className="btn-metallic"
+            style={{
+              padding: "14px 32px",
+              background: "linear-gradient(160deg, #0f0f0f 0%, #050505 100%)",
+              color: "rgba(255,255,255,0.72)",
+            }}
+          >
+            Iniciar el proceso
+          </a>
           <a
             href="#method"
             className="btn-metallic"

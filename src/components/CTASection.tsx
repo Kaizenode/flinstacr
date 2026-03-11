@@ -561,7 +561,7 @@ export default function CTASection() {
         {/* Book a call CTA */}
         <div data-reveal data-delay="5" style={{ marginBottom: "3rem" }}>
           <button className="btn-metallic lg">
-            Reservar una llamada gratuita
+            ✦ Reservar una Llamada
           </button>
         </div>
 
