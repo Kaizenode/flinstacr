@@ -6,8 +6,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import BlobBackground from "./BlobBackground";
 
 const socials = [
-  { label: "TikTok", icon: FaTiktok },
-  { label: "Instagram", icon: FaInstagram },
+  { label: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@flinsta?_r=1&_t=ZS-94bYWEpeSlJ" },
+  { label: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/flinstacr?igsh=d3NldnQ2bXpyZjZz" },
 ];
 
 const countryCodes = [
@@ -577,7 +577,7 @@ export default function CTASection() {
             fontSize: "0.875rem",
           }}
         >
-          {socials.map(({ label, icon: Icon }, i) => (
+          {socials.map(({ label, icon: Icon, href }, i) => (
             <Fragment key={label}>
               {i > 0 && (
                 <span
@@ -590,7 +590,9 @@ export default function CTASection() {
                 </span>
               )}
               <a
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 style={{
                   color: "rgba(255,255,255,0.45)",
